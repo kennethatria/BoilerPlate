@@ -3,10 +3,10 @@ const github = require('@actions/github');
 
 try {
   // `who-to-greet` input defined in action metadata file
-  const nameToGreet = core.getInput('who-to-greet');
+  /*const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
-  core.setOutput("time", time);
+  core.setOutput("time", time); */
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context, undefined, 2);
   console.log(github.context.payload.issue.number);
@@ -19,7 +19,7 @@ try {
   core.setFailed(error.message);
 }
 
-function extractEmail(sample_body){
+function extractEmail(text){
     let email = 'Invalid or no email provided'
     const text_body = text.match(/^(email: )(?<email>.*)$/m)
     if (text_body?.groups?.email === undefined || text_body?.groups?.email === '') {
@@ -34,7 +34,7 @@ function extractEmail(sample_body){
       }
 }
 
-function extractIP(sample_body){
+function extractIP(text){
     let ip = 'Invalid or no ip provided'
     const text_body = text.match(/^(ip: )(?<ip>.*)$/m)
     if (text_body?.groups?.ip === undefined || text_body?.groups?.ip === '') {
