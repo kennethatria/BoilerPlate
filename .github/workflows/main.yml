@@ -1,0 +1,28 @@
+name : Ip Whitelisting
+
+on:
+  issues:
+    types: [opened, edited]
+    
+jobs:
+  checking-issue-body:
+    defaults:
+      run:
+        working-directory: .github/actions/tests
+    if: ${{ startsWith(github.event.issue.title, 'Something') || contains(github.event.issue.labels.*.name, 'something') && github.actor == 'kennethatria' }}
+    runs-on: ubuntu-latest
+    name: test and checks
+    steps:
+      - name: checkout this repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: install
+        run: npm install
+
+      - name: testing-action
+        id: testing-action
+        uses: ./.github/actions/tests
+
+
