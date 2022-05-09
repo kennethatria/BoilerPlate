@@ -3,12 +3,12 @@ description: action enables updating of ip whitelisting list
 title: Whitelist IP
 labels: "whitelist ip"
 body:
-- type: textarea
-  id: something
-  attributes: 
-    description: |
-      examples:
-        - email: yourEmail@domain.org
-    value: |
+  - type: textarea
+    id: something
+    attributes: 
+      description: |
+        examples:
+          - email: yourEmail@domain.org
+      value: |
         - ip:
     render: markdown
