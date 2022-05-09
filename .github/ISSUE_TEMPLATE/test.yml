@@ -1,11 +1,12 @@
-name: IP whitelisting action
-description: action enables updating of ip whitelisting list
-title: Whitelist IP
-labels: "whitelist ip"
+name: something
+description: something
+title: something
+labels: "something"
 body:
   - type: textarea
     id: something
-    attributes: 
+    attributes:
+      label: something
       description: |
         examples:
           - email: yourEmail@domain.org
