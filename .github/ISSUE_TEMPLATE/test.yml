@@ -9,7 +9,9 @@ body:
       label: provide email and ip
       description: |
         examples:
-          - email: yourEmail@domain.org
+          email: yourEmail@domain.org
+          ip: 0.0.0.0
       value: |
-        - ip:
+        email:
+        ip:
       render: markdown
