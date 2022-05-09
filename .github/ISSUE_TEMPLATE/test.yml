@@ -1,7 +1,7 @@
 name: IP whitelisting action
 description: action enables updating of ip whitelisting list
 title: Whitelist IP
-labels: whitelist ip
+labels: "whitelist ip"
 body:
 - type: textarea
   id: something
