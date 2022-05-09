@@ -1,4 +1,4 @@
-name: something
+name: Test Action
 description: something
 title: something
 labels: "something"
@@ -6,7 +6,7 @@ body:
   - type: textarea
     id: something
     attributes:
-      label: provide email and ip
+      label: Provide email and ip just as described in template
       description: |
         examples:
           email: yourEmail@domain.org

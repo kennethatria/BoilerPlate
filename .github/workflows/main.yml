@@ -1,11 +1,11 @@
-name : Ip Whitelisting
+name : Test Action
 
 on:
   issues:
     types: [opened, edited]
     
 jobs:
-  checking-issue-body:
+  test-action:
     defaults:
       run:
         working-directory: .github/actions/tests
